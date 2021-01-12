@@ -70,7 +70,6 @@ def find_all(A):
 
 
 def main():
-    print('Введите название входного файла')
     file_name = 'input.txt'
     if len(sys.argv) > 2:
         file_name = sys.argv[1]
