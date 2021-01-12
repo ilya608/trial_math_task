@@ -29,7 +29,9 @@ def build_graphic():
     for i in range(len(x)):
         pairs.append((x[i], y[i]))
     pairs.sort()
-    file_output_name = 'output(multithread).txt'
+    file_output_name = 'output.txt'
+    if len(sys.argv) >= 2:
+        file_output_name = sys.argv[2]
     with open(file_output_name, 'w') as file:
         lastWeight = 0
         i = 0
@@ -70,6 +72,8 @@ def find_all(A):
 def main():
     print('Введите название входного файла')
     file_name = 'input.txt'
+    if len(sys.argv) > 2:
+        file_name = sys.argv[1]
     with open(file_name, 'r') as file:
         lines = file.readlines()
         A = []
